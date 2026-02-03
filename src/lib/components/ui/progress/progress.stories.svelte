@@ -68,7 +68,7 @@
 
 <Story name="CustomMax" args={{ value: 3, max: 5 }} let:args>
 	<div class="w-full max-w-md">
-		<p class="mb-2 text-sm text-muted-foreground">3 of 5 steps completed</p>
+		<p class="text-muted-foreground mb-2 text-sm">3 of 5 steps completed</p>
 		<Progress {...args} />
 	</div>
 </Story>
@@ -86,23 +86,23 @@
 <Story name="AllValues">
 	<div class="w-full max-w-md space-y-4">
 		<div class="space-y-1">
-			<span class="text-sm text-muted-foreground">0%</span>
+			<span class="text-muted-foreground text-sm">0%</span>
 			<Progress value={0} />
 		</div>
 		<div class="space-y-1">
-			<span class="text-sm text-muted-foreground">25%</span>
+			<span class="text-muted-foreground text-sm">25%</span>
 			<Progress value={25} />
 		</div>
 		<div class="space-y-1">
-			<span class="text-sm text-muted-foreground">50%</span>
+			<span class="text-muted-foreground text-sm">50%</span>
 			<Progress value={50} />
 		</div>
 		<div class="space-y-1">
-			<span class="text-sm text-muted-foreground">75%</span>
+			<span class="text-muted-foreground text-sm">75%</span>
 			<Progress value={75} />
 		</div>
 		<div class="space-y-1">
-			<span class="text-sm text-muted-foreground">100%</span>
+			<span class="text-muted-foreground text-sm">100%</span>
 			<Progress value={100} />
 		</div>
 	</div>
@@ -111,13 +111,13 @@
 <Story name="FileUpload">
 	<div class="w-full max-w-md space-y-3 rounded-lg border p-4">
 		<div class="flex items-center gap-3">
-			<div class="flex size-10 items-center justify-center rounded bg-muted text-xs">PDF</div>
+			<div class="bg-muted flex size-10 items-center justify-center rounded text-xs">PDF</div>
 			<div class="min-w-0 flex-1">
 				<p class="truncate text-sm font-medium">document.pdf</p>
-				<p class="text-xs text-muted-foreground">2.4 MB</p>
+				<p class="text-muted-foreground text-xs">2.4 MB</p>
 			</div>
 		</div>
 		<Progress value={73} />
-		<p class="text-right text-xs text-muted-foreground">73% uploaded</p>
+		<p class="text-muted-foreground text-right text-xs">73% uploaded</p>
 	</div>
 </Story>

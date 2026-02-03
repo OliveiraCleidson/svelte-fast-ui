@@ -66,7 +66,7 @@
 									<span>Direct Trigger</span>
 								</Sidebar.MenuButton>
 								<Collapsible.Trigger
-									class="absolute end-1 top-1.5 flex aspect-square w-5 items-center justify-center rounded-md p-0 transition-transform hover:bg-sidebar-accent data-[state=open]:rotate-90"
+									class="hover:bg-sidebar-accent absolute end-1 top-1.5 flex aspect-square w-5 items-center justify-center rounded-md p-0 transition-transform data-[state=open]:rotate-90"
 								>
 									<ChevronRightIcon class="size-4" />
 								</Collapsible.Trigger>
@@ -91,7 +91,7 @@
 							</Sidebar.MenuButton>
 							<button
 								onclick={handleToggle}
-								class="absolute end-1 top-1.5 flex aspect-square w-5 items-center justify-center rounded-md p-0 transition-transform hover:bg-sidebar-accent"
+								class="hover:bg-sidebar-accent absolute end-1 top-1.5 flex aspect-square w-5 items-center justify-center rounded-md p-0 transition-transform"
 								class:rotate-90={open}
 							>
 								<ChevronRightIcon class="size-4" />
@@ -112,7 +112,7 @@
 			</Sidebar.Content>
 
 			<Sidebar.Footer>
-				<div class="px-4 py-2 text-xs text-muted-foreground">
+				<div class="text-muted-foreground px-4 py-2 text-xs">
 					Open state: {open ? 'true' : 'false'}
 				</div>
 			</Sidebar.Footer>

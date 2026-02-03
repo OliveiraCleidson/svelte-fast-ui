@@ -63,35 +63,35 @@
 <Story name="AllExamples">
 	<div class="flex flex-col gap-4">
 		<div class="flex items-center gap-2">
-			<span class="w-32 text-sm text-muted-foreground">Search:</span>
+			<span class="text-muted-foreground w-32 text-sm">Search:</span>
 			<KbdGroup>
 				<Kbd><CommandIcon /></Kbd>
 				<Kbd>K</Kbd>
 			</KbdGroup>
 		</div>
 		<div class="flex items-center gap-2">
-			<span class="w-32 text-sm text-muted-foreground">Copy:</span>
+			<span class="text-muted-foreground w-32 text-sm">Copy:</span>
 			<KbdGroup>
 				<Kbd><CommandIcon /></Kbd>
 				<Kbd>C</Kbd>
 			</KbdGroup>
 		</div>
 		<div class="flex items-center gap-2">
-			<span class="w-32 text-sm text-muted-foreground">Paste:</span>
+			<span class="text-muted-foreground w-32 text-sm">Paste:</span>
 			<KbdGroup>
 				<Kbd><CommandIcon /></Kbd>
 				<Kbd>V</Kbd>
 			</KbdGroup>
 		</div>
 		<div class="flex items-center gap-2">
-			<span class="w-32 text-sm text-muted-foreground">Save:</span>
+			<span class="text-muted-foreground w-32 text-sm">Save:</span>
 			<KbdGroup>
 				<Kbd><CommandIcon /></Kbd>
 				<Kbd>S</Kbd>
 			</KbdGroup>
 		</div>
 		<div class="flex items-center gap-2">
-			<span class="w-32 text-sm text-muted-foreground">Submit:</span>
+			<span class="text-muted-foreground w-32 text-sm">Submit:</span>
 			<Kbd><CornerDownLeftIcon /></Kbd>
 		</div>
 	</div>

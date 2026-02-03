@@ -149,7 +149,7 @@
 <Story name="WithActions">
 	<Item.Root variant="outline" class="w-full max-w-md">
 		<Item.Media>
-			<FileIcon class="size-8 text-muted-foreground" />
+			<FileIcon class="text-muted-foreground size-8" />
 		</Item.Media>
 		<Item.Content>
 			<Item.Title>document.pdf</Item.Title>
@@ -234,7 +234,7 @@
 		</Item.Root>
 		<Item.Root variant="outline">
 			<Item.Media>
-				<FileIcon class="size-8 text-muted-foreground" />
+				<FileIcon class="text-muted-foreground size-8" />
 			</Item.Media>
 			<Item.Content>
 				<Item.Title>readme.md</Item.Title>
@@ -301,25 +301,25 @@
 
 <Story name="SettingsList">
 	<Item.Group class="w-full max-w-md">
-		<Item.Root variant="muted" class="cursor-pointer hover:bg-muted">
+		<Item.Root variant="muted" class="hover:bg-muted cursor-pointer">
 			<Item.Media>
-				<EditIcon class="size-5 text-muted-foreground" />
+				<EditIcon class="text-muted-foreground size-5" />
 			</Item.Media>
 			<Item.Content>
 				<Item.Title>Edit Profile</Item.Title>
 				<Item.Description>Update your personal information</Item.Description>
 			</Item.Content>
 		</Item.Root>
-		<Item.Root variant="muted" class="cursor-pointer hover:bg-muted">
+		<Item.Root variant="muted" class="hover:bg-muted cursor-pointer">
 			<Item.Media>
-				<StarIcon class="size-5 text-muted-foreground" />
+				<StarIcon class="text-muted-foreground size-5" />
 			</Item.Media>
 			<Item.Content>
 				<Item.Title>Preferences</Item.Title>
 				<Item.Description>Customize your experience</Item.Description>
 			</Item.Content>
 		</Item.Root>
-		<Item.Root variant="muted" class="cursor-pointer text-destructive hover:bg-muted">
+		<Item.Root variant="muted" class="text-destructive hover:bg-muted cursor-pointer">
 			<Item.Media>
 				<TrashIcon class="size-5" />
 			</Item.Media>

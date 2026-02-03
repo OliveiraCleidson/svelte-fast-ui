@@ -172,22 +172,22 @@
 				</Tabs.List>
 			</div>
 			<Tabs.Content value="day">
-				<div class="flex h-[200px] items-center justify-center rounded bg-muted">
+				<div class="bg-muted flex h-[200px] items-center justify-center rounded">
 					<p class="text-muted-foreground">Daily chart data</p>
 				</div>
 			</Tabs.Content>
 			<Tabs.Content value="week">
-				<div class="flex h-[200px] items-center justify-center rounded bg-muted">
+				<div class="bg-muted flex h-[200px] items-center justify-center rounded">
 					<p class="text-muted-foreground">Weekly chart data</p>
 				</div>
 			</Tabs.Content>
 			<Tabs.Content value="month">
-				<div class="flex h-[200px] items-center justify-center rounded bg-muted">
+				<div class="bg-muted flex h-[200px] items-center justify-center rounded">
 					<p class="text-muted-foreground">Monthly chart data</p>
 				</div>
 			</Tabs.Content>
 			<Tabs.Content value="year">
-				<div class="flex h-[200px] items-center justify-center rounded bg-muted">
+				<div class="bg-muted flex h-[200px] items-center justify-center rounded">
 					<p class="text-muted-foreground">Yearly chart data</p>
 				</div>
 			</Tabs.Content>

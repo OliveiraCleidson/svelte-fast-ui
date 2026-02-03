@@ -58,7 +58,7 @@
 <div
 	data-kanban-column
 	data-column-id={column.id}
-	class={cn('flex w-72 shrink-0 flex-col rounded-lg bg-muted/50', className)}
+	class={cn('bg-muted/50 flex w-72 shrink-0 flex-col rounded-lg', className)}
 	{...restProps}
 >
 	<!-- Header -->
@@ -70,7 +70,7 @@
 			class="flex cursor-grab items-center justify-between p-3 active:cursor-grabbing"
 		>
 			<h3 class="font-semibold">{column.title}</h3>
-			<span class="text-sm text-muted-foreground">{cardCount}</span>
+			<span class="text-muted-foreground text-sm">{cardCount}</span>
 		</div>
 	{/if}
 

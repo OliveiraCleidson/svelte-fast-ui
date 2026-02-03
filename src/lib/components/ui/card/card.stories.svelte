@@ -102,7 +102,7 @@
 				</Avatar.Root>
 				<div class="flex-1">
 					<p class="text-sm font-medium">Sofia Davis</p>
-					<p class="text-sm text-muted-foreground">sofia@example.com</p>
+					<p class="text-muted-foreground text-sm">sofia@example.com</p>
 				</div>
 			</div>
 			<div class="flex items-center gap-4">
@@ -111,7 +111,7 @@
 				</Avatar.Root>
 				<div class="flex-1">
 					<p class="text-sm font-medium">John Doe</p>
-					<p class="text-sm text-muted-foreground">john@example.com</p>
+					<p class="text-muted-foreground text-sm">john@example.com</p>
 				</div>
 			</div>
 		</Card.Content>
@@ -160,7 +160,7 @@
 		</Card.Header>
 		<Card.Content>
 			<div class="text-4xl font-bold">$29</div>
-			<p class="text-sm text-muted-foreground">per month</p>
+			<p class="text-muted-foreground text-sm">per month</p>
 			<ul class="mt-4 space-y-2 text-sm">
 				<li class="flex items-center gap-2">
 					<span class="text-green-500">✓</span> Unlimited projects
@@ -187,7 +187,7 @@
 				<Card.Title class="text-2xl">$45,231.89</Card.Title>
 			</Card.Header>
 			<Card.Content>
-				<p class="text-xs text-muted-foreground">+20.1% from last month</p>
+				<p class="text-muted-foreground text-xs">+20.1% from last month</p>
 			</Card.Content>
 		</Card.Root>
 		<Card.Root>
@@ -196,7 +196,7 @@
 				<Card.Title class="text-2xl">+2,350</Card.Title>
 			</Card.Header>
 			<Card.Content>
-				<p class="text-xs text-muted-foreground">+180.1% from last month</p>
+				<p class="text-muted-foreground text-xs">+180.1% from last month</p>
 			</Card.Content>
 		</Card.Root>
 		<Card.Root>
@@ -205,7 +205,7 @@
 				<Card.Title class="text-2xl">+12,234</Card.Title>
 			</Card.Header>
 			<Card.Content>
-				<p class="text-xs text-muted-foreground">+19% from last month</p>
+				<p class="text-muted-foreground text-xs">+19% from last month</p>
 			</Card.Content>
 		</Card.Root>
 	</div>
@@ -229,7 +229,7 @@
 		</Card.Content>
 		<Card.Footer class="flex flex-col gap-2">
 			<Button class="w-full">Sign in</Button>
-			<p class="text-center text-xs text-muted-foreground">
+			<p class="text-muted-foreground text-center text-xs">
 				Don't have an account? <a href="#" class="underline">Sign up</a>
 			</p>
 		</Card.Footer>

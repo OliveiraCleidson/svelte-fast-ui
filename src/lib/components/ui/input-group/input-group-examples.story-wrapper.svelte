@@ -58,7 +58,7 @@
 		<InputGroup.Input placeholder="@shadcn" />
 		<InputGroup.Addon align="inline-end">
 			<div
-				class="flex size-4 items-center justify-center rounded-full bg-primary text-primary-foreground"
+				class="bg-primary text-primary-foreground flex size-4 items-center justify-center rounded-full"
 			>
 				<CheckIcon class="size-3" />
 			</div>

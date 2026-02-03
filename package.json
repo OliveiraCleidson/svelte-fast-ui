@@ -1,192 +1,193 @@
 {
-  "name": "svelte-fast-ui",
-  "version": "0.0.1-beta.1",
-  "description": "A fast, modern UI component library for Svelte 5 and SvelteKit, built with Tailwind CSS v4",
-  "type": "module",
-  "license": "MIT",
-  "engines": {
-    "node": ">=18"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/OliveiraCleidson/svelte-fast-ui.git"
-  },
-  "homepage": "https://github.com/OliveiraCleidson/svelte-fast-ui",
-  "bugs": {
-    "url": "https://github.com/OliveiraCleidson/svelte-fast-ui/issues"
-  },
-  "keywords": [
-    "svelte",
-    "sveltekit",
-    "ui",
-    "components",
-    "tailwindcss",
-    "design-system",
-    "svelte5"
-  ],
-  "svelte": "./dist/index.js",
-  "types": "./dist/index.d.ts",
-  "sideEffects": [
-    "**/*.css"
-  ],
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "svelte": "./dist/index.js",
-      "default": "./dist/index.js"
-    },
-    "./components/ui/*": {
-      "types": "./dist/components/ui/*/index.d.ts",
-      "svelte": "./dist/components/ui/*/index.js",
-      "default": "./dist/components/ui/*/index.js"
-    },
-    "./hooks/*": {
-      "types": "./dist/hooks/*.d.ts",
-      "svelte": "./dist/hooks/*.js",
-      "default": "./dist/hooks/*.js"
-    },
-    "./sortable": {
-      "types": "./dist/sortable/index.d.ts",
-      "svelte": "./dist/sortable/index.js",
-      "default": "./dist/sortable/index.js"
-    },
-    "./tokens": "./dist/tokens/index.css",
-    "./tokens/theme": "./dist/tokens/theme.css",
-    "./tokens/*": "./dist/tokens/*.css",
-    "./tokens/themes/*": "./dist/tokens/themes/*.css",
-    "./utils": {
-      "types": "./dist/utils.d.ts",
-      "svelte": "./dist/utils.js",
-      "default": "./dist/utils.js"
-    }
-  },
-  "files": [
-    "dist",
-    "!dist/**/*.stories.*",
-    "!dist/**/*.story-wrapper.*",
-    "!dist/**/*.spec.*",
-    "!dist/**/*.test.*"
-  ],
-  "scripts": {
-    "dev": "vite dev",
-    "build": "vite build",
-    "package": "svelte-kit sync && svelte-package -o dist",
-    "prepublishOnly": "npm run package",
-    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
-    "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-    "lint": "prettier --check . && eslint .",
-    "format": "prettier --write .",
-    "test": "vitest --run",
-    "test:watch": "vitest",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
-  },
-  "dependencies": {
-    "bits-ui": "^2.14.4",
-    "clsx": "^2.1.1",
-    "tailwind-merge": "^3.4.0",
-    "tailwind-variants": "^3.2.2"
-  },
-  "peerDependencies": {
-    "@internationalized/date": "^3.10.0",
-    "@lucide/svelte": "^0.500.0",
-    "@tanstack/table-core": "^8.21.3",
-    "embla-carousel-svelte": "^8.6.0",
-    "formsnap": "^2.0.1",
-    "layerchart": ">=2.0.0-next.1",
-    "mode-watcher": "^1.1.0",
-    "paneforge": "^1.0.2",
-    "sortablejs": "^1.15.6",
-    "svelte": "^5.0.0",
-    "svelte-sonner": "^1.0.7",
-    "sveltekit-superforms": "^2.28.1",
-    "tailwindcss": "^4.0.0",
-    "vaul-svelte": "^1.0.0-next.7",
-    "zod": "^4.2.1"
-  },
-  "peerDependenciesMeta": {
-    "@internationalized/date": {
-      "optional": true
-    },
-    "@tanstack/table-core": {
-      "optional": true
-    },
-    "embla-carousel-svelte": {
-      "optional": true
-    },
-    "formsnap": {
-      "optional": true
-    },
-    "layerchart": {
-      "optional": true
-    },
-    "mode-watcher": {
-      "optional": true
-    },
-    "paneforge": {
-      "optional": true
-    },
-    "sortablejs": {
-      "optional": true
-    },
-    "svelte-sonner": {
-      "optional": true
-    },
-    "sveltekit-superforms": {
-      "optional": true
-    },
-    "vaul-svelte": {
-      "optional": true
-    },
-    "zod": {
-      "optional": true
-    }
-  },
-  "devDependencies": {
-    "@chromatic-com/storybook": "^4.1.3",
-    "@eslint/compat": "^2.0.0",
-    "@eslint/js": "^9.39.2",
-    "@internationalized/date": "^3.10.0",
-    "@lucide/svelte": "^0.561.0",
-    "@storybook/addon-a11y": "^10.1.10",
-    "@storybook/addon-docs": "^10.1.10",
-    "@storybook/addon-svelte-csf": "^5.0.10",
-    "@storybook/addon-vitest": "^10.1.10",
-    "@storybook/sveltekit": "^10.1.10",
-    "@sveltejs/adapter-auto": "^6.0.0",
-    "@sveltejs/kit": "^2.49.1",
-    "@sveltejs/package": "^2.3.11",
-    "@sveltejs/vite-plugin-svelte": "^6.2.1",
-    "@tailwindcss/vite": "^4.1.17",
-    "@tanstack/table-core": "^8.21.3",
-    "@types/d3-scale": "^4.0.9",
-    "@types/d3-shape": "^3.1.7",
-    "@types/sortablejs": "^1.15.9",
-    "embla-carousel-svelte": "^8.6.0",
-    "eslint": "^9.39.1",
-    "eslint-config-prettier": "^10.1.8",
-    "eslint-plugin-svelte": "^3.13.1",
-    "formsnap": "^2.0.1",
-    "globals": "^17.0.0",
-    "layerchart": "2.0.0-next.43",
-    "mode-watcher": "^1.1.0",
-    "paneforge": "^1.0.2",
-    "prettier": "^3.7.4",
-    "prettier-plugin-svelte": "^3.4.1",
-    "prettier-plugin-tailwindcss": "^0.7.2",
-    "sortablejs": "^1.15.6",
-    "storybook": "^10.1.10",
-    "svelte": "^5.45.6",
-    "svelte-check": "^4.3.4",
-    "svelte-sonner": "^1.0.7",
-    "sveltekit-superforms": "^2.28.1",
-    "tailwindcss": "^4.1.17",
-    "tw-animate-css": "^1.4.0",
-    "typescript": "^5.9.3",
-    "typescript-eslint": "^8.51.0",
-    "vaul-svelte": "^1.0.0-next.7",
-    "vite": "^7.2.6",
-    "vitest": "^4.0.15",
-    "zod": "^4.2.1"
-  }
+	"name": "svelte-fast-ui",
+	"version": "0.0.1-beta.2",
+	"description": "A fast, modern UI component library for Svelte 5 and SvelteKit, built with Tailwind CSS v4",
+	"type": "module",
+	"license": "MIT",
+	"engines": {
+		"node": ">=18"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/OliveiraCleidson/svelte-fast-ui.git"
+	},
+	"homepage": "https://github.com/OliveiraCleidson/svelte-fast-ui",
+	"bugs": {
+		"url": "https://github.com/OliveiraCleidson/svelte-fast-ui/issues"
+	},
+	"keywords": [
+		"svelte",
+		"sveltekit",
+		"ui",
+		"components",
+		"tailwindcss",
+		"design-system",
+		"svelte5"
+	],
+	"svelte": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"sideEffects": [
+		"**/*.css"
+	],
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"svelte": "./dist/index.js",
+			"default": "./dist/index.js"
+		},
+		"./components/ui/*": {
+			"types": "./dist/components/ui/*/index.d.ts",
+			"svelte": "./dist/components/ui/*/index.js",
+			"default": "./dist/components/ui/*/index.js"
+		},
+		"./hooks/*": {
+			"types": "./dist/hooks/*.d.ts",
+			"svelte": "./dist/hooks/*.js",
+			"default": "./dist/hooks/*.js"
+		},
+		"./sortable": {
+			"types": "./dist/sortable/index.d.ts",
+			"svelte": "./dist/sortable/index.js",
+			"default": "./dist/sortable/index.js"
+		},
+		"./tokens": "./dist/tokens/index.css",
+		"./tokens/theme": "./dist/tokens/theme.css",
+		"./tokens/*": "./dist/tokens/*.css",
+		"./tokens/themes/*": "./dist/tokens/themes/*.css",
+		"./utils": {
+			"types": "./dist/utils.d.ts",
+			"svelte": "./dist/utils.js",
+			"default": "./dist/utils.js"
+		}
+	},
+	"files": [
+		"dist",
+		"!dist/**/*.stories.*",
+		"!dist/**/*.story-wrapper.*",
+		"!dist/**/*.spec.*",
+		"!dist/**/*.test.*"
+	],
+	"scripts": {
+		"dev": "vite dev",
+		"build": "vite build",
+		"package": "svelte-kit sync && svelte-package -o dist",
+		"prepublishOnly": "npm run package",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+		"lint": "prettier --check . && eslint .",
+		"format": "prettier --write .",
+		"test": "vitest --run",
+		"test:watch": "vitest",
+		"storybook": "storybook dev -p 6006",
+		"build-storybook": "storybook build"
+	},
+	"dependencies": {
+		"bits-ui": "^2.14.4",
+		"clsx": "^2.1.1",
+		"tailwind-merge": "^3.4.0",
+		"tailwind-variants": "^3.2.2"
+	},
+	"peerDependencies": {
+		"@internationalized/date": "^3.10.0",
+		"@lucide/svelte": "^0.500.0",
+		"@tanstack/table-core": "^8.21.3",
+		"embla-carousel-svelte": "^8.6.0",
+		"formsnap": "^2.0.1",
+		"layerchart": ">=2.0.0-next.1",
+		"mode-watcher": "^1.1.0",
+		"paneforge": "^1.0.2",
+		"sortablejs": "^1.15.6",
+		"svelte": "^5.0.0",
+		"svelte-sonner": "^1.0.7",
+		"sveltekit-superforms": "^2.28.1",
+		"tailwindcss": "^4.0.0",
+		"vaul-svelte": "^1.0.0-next.7",
+		"zod": "^4.2.1"
+	},
+	"peerDependenciesMeta": {
+		"@internationalized/date": {
+			"optional": true
+		},
+		"@tanstack/table-core": {
+			"optional": true
+		},
+		"embla-carousel-svelte": {
+			"optional": true
+		},
+		"formsnap": {
+			"optional": true
+		},
+		"layerchart": {
+			"optional": true
+		},
+		"mode-watcher": {
+			"optional": true
+		},
+		"paneforge": {
+			"optional": true
+		},
+		"sortablejs": {
+			"optional": true
+		},
+		"svelte-sonner": {
+			"optional": true
+		},
+		"sveltekit-superforms": {
+			"optional": true
+		},
+		"vaul-svelte": {
+			"optional": true
+		},
+		"zod": {
+			"optional": true
+		}
+	},
+	"devDependencies": {
+		"@chromatic-com/storybook": "^4.1.3",
+		"@eslint/compat": "^2.0.0",
+		"@eslint/js": "^9.39.2",
+		"@internationalized/date": "^3.10.0",
+		"@lucide/svelte": "^0.561.0",
+		"@storybook/addon-a11y": "^10.1.10",
+		"@storybook/addon-docs": "^10.1.10",
+		"@storybook/addon-svelte-csf": "^5.0.10",
+		"@storybook/addon-vitest": "^10.1.10",
+		"@storybook/sveltekit": "^10.1.10",
+		"@sveltejs/adapter-auto": "^6.0.0",
+		"@sveltejs/kit": "^2.49.1",
+		"@sveltejs/package": "^2.3.11",
+		"@sveltejs/vite-plugin-svelte": "^6.2.1",
+		"@tailwindcss/vite": "^4.1.17",
+		"@tanstack/table-core": "^8.21.3",
+		"@types/d3-scale": "^4.0.9",
+		"@types/d3-shape": "^3.1.7",
+		"@types/sortablejs": "^1.15.9",
+		"embla-carousel-svelte": "^8.6.0",
+		"eslint": "^9.39.1",
+		"eslint-config-prettier": "^10.1.8",
+		"eslint-plugin-svelte": "^3.13.1",
+		"formsnap": "^2.0.1",
+		"globals": "^17.0.0",
+		"jsdom": "^28.0.0",
+		"layerchart": "2.0.0-next.43",
+		"mode-watcher": "^1.1.0",
+		"paneforge": "^1.0.2",
+		"prettier": "^3.7.4",
+		"prettier-plugin-svelte": "^3.4.1",
+		"prettier-plugin-tailwindcss": "^0.7.2",
+		"sortablejs": "^1.15.6",
+		"storybook": "^10.1.10",
+		"svelte": "^5.45.6",
+		"svelte-check": "^4.3.4",
+		"svelte-sonner": "^1.0.7",
+		"sveltekit-superforms": "^2.28.1",
+		"tailwindcss": "^4.1.17",
+		"tw-animate-css": "^1.4.0",
+		"typescript": "^5.9.3",
+		"typescript-eslint": "^8.51.0",
+		"vaul-svelte": "^1.0.0-next.7",
+		"vite": "^7.2.6",
+		"vitest": "^4.0.15",
+		"zod": "^4.2.1"
+	}
 }

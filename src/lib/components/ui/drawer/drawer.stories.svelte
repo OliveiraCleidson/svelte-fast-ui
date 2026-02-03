@@ -52,7 +52,7 @@
 				</Drawer.Description>
 			</Drawer.Header>
 			<div class="p-4">
-				<p class="text-sm text-muted-foreground">Drawer content goes here.</p>
+				<p class="text-muted-foreground text-sm">Drawer content goes here.</p>
 			</div>
 		</Drawer.Content>
 	</Drawer.Root>

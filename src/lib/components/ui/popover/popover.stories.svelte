@@ -20,7 +20,7 @@
 			<div class="grid gap-4">
 				<div class="space-y-2">
 					<h4 class="leading-none font-medium">Dimensions</h4>
-					<p class="text-sm text-muted-foreground">Set the dimensions for the layer.</p>
+					<p class="text-muted-foreground text-sm">Set the dimensions for the layer.</p>
 				</div>
 				<div class="grid gap-2">
 					<div class="grid grid-cols-3 items-center gap-4">
@@ -73,15 +73,15 @@
 <Story name="UserProfile">
 	<Popover.Root>
 		<Popover.Trigger class={buttonVariants({ variant: 'ghost', size: 'icon' }) + ' rounded-full'}>
-			<div class="size-8 rounded-full bg-muted"></div>
+			<div class="bg-muted size-8 rounded-full"></div>
 		</Popover.Trigger>
 		<Popover.Content class="w-64" align="end">
 			<div class="space-y-4">
 				<div class="flex items-center gap-3">
-					<div class="size-10 rounded-full bg-muted"></div>
+					<div class="bg-muted size-10 rounded-full"></div>
 					<div>
 						<p class="font-medium">John Doe</p>
-						<p class="text-sm text-muted-foreground">john@example.com</p>
+						<p class="text-muted-foreground text-sm">john@example.com</p>
 					</div>
 				</div>
 				<div class="space-y-1 border-t pt-2">
@@ -140,11 +140,11 @@
 				</div>
 				<div class="space-y-2">
 					{#each [1, 2, 3] as _}
-						<div class="flex cursor-pointer gap-3 rounded p-2 hover:bg-muted">
-							<div class="size-8 shrink-0 rounded-full bg-muted"></div>
+						<div class="hover:bg-muted flex cursor-pointer gap-3 rounded p-2">
+							<div class="bg-muted size-8 shrink-0 rounded-full"></div>
 							<div>
 								<p class="text-sm font-medium">New message</p>
-								<p class="text-xs text-muted-foreground">2 minutes ago</p>
+								<p class="text-muted-foreground text-xs">2 minutes ago</p>
 							</div>
 						</div>
 					{/each}

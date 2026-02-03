@@ -14,7 +14,7 @@
 
 <span
 	data-slot="command-shortcut"
-	class={cn('ms-auto text-xs tracking-widest text-muted-foreground', className)}
+	class={cn('text-muted-foreground ms-auto text-xs tracking-widest', className)}
 	{...restProps}
 >
 	{@render children?.()}

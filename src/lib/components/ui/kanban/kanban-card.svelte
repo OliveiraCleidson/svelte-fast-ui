@@ -18,7 +18,7 @@
 	data-id={card.id}
 	data-card-id={card.id}
 	class={cn(
-		'cursor-grab rounded-md border bg-background p-3 shadow-sm transition-shadow hover:shadow-md active:cursor-grabbing',
+		'bg-background cursor-grab rounded-md border p-3 shadow-sm transition-shadow hover:shadow-md active:cursor-grabbing',
 		className
 	)}
 	{...restProps}
@@ -28,7 +28,7 @@
 	{:else}
 		<p class="font-medium">{card.title}</p>
 		{#if card.description}
-			<p class="mt-1 text-sm text-muted-foreground">{card.description}</p>
+			<p class="text-muted-foreground mt-1 text-sm">{card.description}</p>
 		{/if}
 	{/if}
 </div>

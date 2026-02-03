@@ -3,3 +3,4 @@ dist
 .svelte-kit
 node_modules
 storybook-static
+.claude/settings.local.json

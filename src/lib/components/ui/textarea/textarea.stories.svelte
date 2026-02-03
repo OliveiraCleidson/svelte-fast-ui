@@ -75,7 +75,7 @@
 			placeholder="Invalid input"
 			class="border-destructive focus-visible:ring-destructive/50"
 		/>
-		<p class="text-sm text-destructive">This field is required.</p>
+		<p class="text-destructive text-sm">This field is required.</p>
 	</div>
 </Story>
 
@@ -83,13 +83,13 @@
 	<div class="grid w-full max-w-sm gap-1.5">
 		<Label for="message">Your message</Label>
 		<Textarea id="message" placeholder="Type your message here..." />
-		<p class="text-sm text-muted-foreground">Your message will be sent to our support team.</p>
+		<p class="text-muted-foreground text-sm">Your message will be sent to our support team.</p>
 	</div>
 </Story>
 
 <Story name="AutoResize">
 	<div class="w-full max-w-sm">
-		<p class="mb-2 text-sm text-muted-foreground">This textarea auto-resizes as you type:</p>
+		<p class="text-muted-foreground mb-2 text-sm">This textarea auto-resizes as you type:</p>
 		<Textarea placeholder="Start typing to see auto-resize..." />
 	</div>
 </Story>

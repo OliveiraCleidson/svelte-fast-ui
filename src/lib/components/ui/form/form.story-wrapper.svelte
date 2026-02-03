@@ -73,7 +73,7 @@
 	<form method="POST" use:enhance class="max-w-lg space-y-6">
 		<div>
 			<h3 class="text-lg font-medium">User Profile</h3>
-			<p class="text-sm text-muted-foreground">
+			<p class="text-muted-foreground text-sm">
 				Complete your profile information. All fields are validated with Zod.
 			</p>
 		</div>

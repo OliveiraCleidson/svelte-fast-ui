@@ -62,10 +62,10 @@
 						<li class="row-span-3">
 							<NavigationMenuLink href="/">
 								<div
-									class="flex h-full w-full flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none select-none focus:shadow-md"
+									class="from-muted/50 to-muted flex h-full w-full flex-col justify-end rounded-md bg-gradient-to-b p-6 no-underline outline-none select-none focus:shadow-md"
 								>
 									<div class="mt-4 mb-2 text-lg font-medium">shadcn/ui</div>
-									<p class="text-sm leading-tight text-muted-foreground">
+									<p class="text-muted-foreground text-sm leading-tight">
 										Beautifully designed components built with Radix UI and Tailwind CSS.
 									</p>
 								</div>
@@ -74,10 +74,10 @@
 						<li>
 							<NavigationMenuLink
 								href="/docs"
-								class="block space-y-1 rounded-md p-3 leading-none no-underline transition-colors outline-none select-none hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+								class="hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground block space-y-1 rounded-md p-3 leading-none no-underline transition-colors outline-none select-none"
 							>
 								<div class="text-sm leading-none font-medium">Introduction</div>
-								<p class="line-clamp-2 text-sm leading-snug text-muted-foreground">
+								<p class="text-muted-foreground line-clamp-2 text-sm leading-snug">
 									Re-usable components built using Radix UI and Tailwind CSS.
 								</p>
 							</NavigationMenuLink>
@@ -85,10 +85,10 @@
 						<li>
 							<NavigationMenuLink
 								href="/docs/installation"
-								class="block space-y-1 rounded-md p-3 leading-none no-underline transition-colors outline-none select-none hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+								class="hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground block space-y-1 rounded-md p-3 leading-none no-underline transition-colors outline-none select-none"
 							>
 								<div class="text-sm leading-none font-medium">Installation</div>
-								<p class="line-clamp-2 text-sm leading-snug text-muted-foreground">
+								<p class="text-muted-foreground line-clamp-2 text-sm leading-snug">
 									How to install dependencies and structure your app.
 								</p>
 							</NavigationMenuLink>
@@ -96,10 +96,10 @@
 						<li>
 							<NavigationMenuLink
 								href="/docs/typography"
-								class="block space-y-1 rounded-md p-3 leading-none no-underline transition-colors outline-none select-none hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+								class="hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground block space-y-1 rounded-md p-3 leading-none no-underline transition-colors outline-none select-none"
 							>
 								<div class="text-sm leading-none font-medium">Typography</div>
-								<p class="line-clamp-2 text-sm leading-snug text-muted-foreground">
+								<p class="text-muted-foreground line-clamp-2 text-sm leading-snug">
 									Styles for headings, paragraphs, lists...etc
 								</p>
 							</NavigationMenuLink>
@@ -115,10 +115,10 @@
 							<li>
 								<NavigationMenuLink
 									href={component.href}
-									class="block space-y-1 rounded-md p-3 leading-none no-underline transition-colors outline-none select-none hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+									class="hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground block space-y-1 rounded-md p-3 leading-none no-underline transition-colors outline-none select-none"
 								>
 									<div class="text-sm leading-none font-medium">{component.title}</div>
-									<p class="line-clamp-2 text-sm leading-snug text-muted-foreground">
+									<p class="text-muted-foreground line-clamp-2 text-sm leading-snug">
 										{component.description}
 									</p>
 								</NavigationMenuLink>
@@ -131,7 +131,7 @@
 				<NavigationMenuLink
 					href="/docs"
 					class={cn(
-						'group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50'
+						'group bg-background hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground inline-flex h-10 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors focus:outline-none disabled:pointer-events-none disabled:opacity-50'
 					)}
 				>
 					Documentation
@@ -148,7 +148,7 @@
 			<NavigationMenuItem>
 				<NavigationMenuLink
 					href="/"
-					class="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground"
+					class="group bg-background hover:bg-accent hover:text-accent-foreground inline-flex h-10 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors"
 				>
 					Home
 				</NavigationMenuLink>
@@ -156,7 +156,7 @@
 			<NavigationMenuItem>
 				<NavigationMenuLink
 					href="/about"
-					class="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground"
+					class="group bg-background hover:bg-accent hover:text-accent-foreground inline-flex h-10 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors"
 				>
 					About
 				</NavigationMenuLink>
@@ -164,7 +164,7 @@
 			<NavigationMenuItem>
 				<NavigationMenuLink
 					href="/contact"
-					class="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground"
+					class="group bg-background hover:bg-accent hover:text-accent-foreground inline-flex h-10 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors"
 				>
 					Contact
 				</NavigationMenuLink>
@@ -183,19 +183,19 @@
 						<li>
 							<NavigationMenuLink
 								href="/products/software"
-								class="block space-y-1 rounded-md p-3 leading-none no-underline transition-colors outline-none select-none hover:bg-accent hover:text-accent-foreground"
+								class="hover:bg-accent hover:text-accent-foreground block space-y-1 rounded-md p-3 leading-none no-underline transition-colors outline-none select-none"
 							>
 								<div class="text-sm leading-none font-medium">Software</div>
-								<p class="text-sm leading-snug text-muted-foreground">Our software solutions</p>
+								<p class="text-muted-foreground text-sm leading-snug">Our software solutions</p>
 							</NavigationMenuLink>
 						</li>
 						<li>
 							<NavigationMenuLink
 								href="/products/hardware"
-								class="block space-y-1 rounded-md p-3 leading-none no-underline transition-colors outline-none select-none hover:bg-accent hover:text-accent-foreground"
+								class="hover:bg-accent hover:text-accent-foreground block space-y-1 rounded-md p-3 leading-none no-underline transition-colors outline-none select-none"
 							>
 								<div class="text-sm leading-none font-medium">Hardware</div>
-								<p class="text-sm leading-snug text-muted-foreground">
+								<p class="text-muted-foreground text-sm leading-snug">
 									Physical devices and accessories
 								</p>
 							</NavigationMenuLink>
@@ -203,10 +203,10 @@
 						<li>
 							<NavigationMenuLink
 								href="/products/services"
-								class="block space-y-1 rounded-md p-3 leading-none no-underline transition-colors outline-none select-none hover:bg-accent hover:text-accent-foreground"
+								class="hover:bg-accent hover:text-accent-foreground block space-y-1 rounded-md p-3 leading-none no-underline transition-colors outline-none select-none"
 							>
 								<div class="text-sm leading-none font-medium">Services</div>
-								<p class="text-sm leading-snug text-muted-foreground">Consulting and support</p>
+								<p class="text-muted-foreground text-sm leading-snug">Consulting and support</p>
 							</NavigationMenuLink>
 						</li>
 					</ul>
@@ -219,19 +219,19 @@
 						<li>
 							<NavigationMenuLink
 								href="/blog"
-								class="block space-y-1 rounded-md p-3 leading-none no-underline transition-colors outline-none select-none hover:bg-accent hover:text-accent-foreground"
+								class="hover:bg-accent hover:text-accent-foreground block space-y-1 rounded-md p-3 leading-none no-underline transition-colors outline-none select-none"
 							>
 								<div class="text-sm leading-none font-medium">Blog</div>
-								<p class="text-sm leading-snug text-muted-foreground">Latest news and articles</p>
+								<p class="text-muted-foreground text-sm leading-snug">Latest news and articles</p>
 							</NavigationMenuLink>
 						</li>
 						<li>
 							<NavigationMenuLink
 								href="/docs"
-								class="block space-y-1 rounded-md p-3 leading-none no-underline transition-colors outline-none select-none hover:bg-accent hover:text-accent-foreground"
+								class="hover:bg-accent hover:text-accent-foreground block space-y-1 rounded-md p-3 leading-none no-underline transition-colors outline-none select-none"
 							>
 								<div class="text-sm leading-none font-medium">Documentation</div>
-								<p class="text-sm leading-snug text-muted-foreground">Guides and API reference</p>
+								<p class="text-muted-foreground text-sm leading-snug">Guides and API reference</p>
 							</NavigationMenuLink>
 						</li>
 					</ul>
@@ -240,7 +240,7 @@
 			<NavigationMenuItem>
 				<NavigationMenuLink
 					href="/pricing"
-					class="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground"
+					class="group bg-background hover:bg-accent hover:text-accent-foreground inline-flex h-10 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors"
 				>
 					Pricing
 				</NavigationMenuLink>

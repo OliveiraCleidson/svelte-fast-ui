@@ -30,7 +30,7 @@
 		</InputGroup.Addon>
 	</InputGroup.Root>
 	<InputGroup.Root class="[--radius:9999px]">
-		<InputGroup.Addon class="ps-1.5 text-muted-foreground">
+		<InputGroup.Addon class="text-muted-foreground ps-1.5">
 			<InputGroup.Text>https://</InputGroup.Text>
 		</InputGroup.Addon>
 		<InputGroup.Input />

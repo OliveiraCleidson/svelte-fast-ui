@@ -116,7 +116,7 @@
 			{#snippet child({ props })}
 				<Button {...props} variant="ghost" class="size-10 rounded-full p-0">
 					<div
-						class="flex size-8 items-center justify-center rounded-full bg-muted text-sm font-medium"
+						class="bg-muted flex size-8 items-center justify-center rounded-full text-sm font-medium"
 					>
 						JD
 					</div>
@@ -127,7 +127,7 @@
 			<DropdownMenu.Label class="font-normal">
 				<div class="flex flex-col space-y-1">
 					<p class="text-sm font-medium">John Doe</p>
-					<p class="text-xs text-muted-foreground">john@example.com</p>
+					<p class="text-muted-foreground text-xs">john@example.com</p>
 				</div>
 			</DropdownMenu.Label>
 			<DropdownMenu.Separator />

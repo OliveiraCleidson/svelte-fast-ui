@@ -143,7 +143,7 @@
 			<Accordion.Item value="specifications">
 				<Accordion.Trigger>Specifications</Accordion.Trigger>
 				<Accordion.Content>
-					<ul class="space-y-1 text-sm text-muted-foreground">
+					<ul class="text-muted-foreground space-y-1 text-sm">
 						<li>Dimensions: 10" x 8" x 4"</li>
 						<li>Weight: 2.5 lbs</li>
 						<li>Material: Recycled Cotton</li>
@@ -171,11 +171,11 @@
 					<div class="space-y-3">
 						<div class="flex items-center justify-between">
 							<span class="text-sm">Language</span>
-							<span class="text-sm text-muted-foreground">English</span>
+							<span class="text-muted-foreground text-sm">English</span>
 						</div>
 						<div class="flex items-center justify-between">
 							<span class="text-sm">Timezone</span>
-							<span class="text-sm text-muted-foreground">UTC-5</span>
+							<span class="text-muted-foreground text-sm">UTC-5</span>
 						</div>
 					</div>
 				</Accordion.Content>
@@ -186,11 +186,11 @@
 					<div class="space-y-3">
 						<div class="flex items-center justify-between">
 							<span class="text-sm">Email notifications</span>
-							<span class="text-sm text-muted-foreground">Enabled</span>
+							<span class="text-muted-foreground text-sm">Enabled</span>
 						</div>
 						<div class="flex items-center justify-between">
 							<span class="text-sm">Push notifications</span>
-							<span class="text-sm text-muted-foreground">Disabled</span>
+							<span class="text-muted-foreground text-sm">Disabled</span>
 						</div>
 					</div>
 				</Accordion.Content>
@@ -201,11 +201,11 @@
 					<div class="space-y-3">
 						<div class="flex items-center justify-between">
 							<span class="text-sm">Profile visibility</span>
-							<span class="text-sm text-muted-foreground">Public</span>
+							<span class="text-muted-foreground text-sm">Public</span>
 						</div>
 						<div class="flex items-center justify-between">
 							<span class="text-sm">Activity status</span>
-							<span class="text-sm text-muted-foreground">Hidden</span>
+							<span class="text-muted-foreground text-sm">Hidden</span>
 						</div>
 					</div>
 				</Accordion.Content>

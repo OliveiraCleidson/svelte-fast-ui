@@ -83,17 +83,17 @@
 				<Command.Item>
 					<FileIcon />
 					<span>README.md</span>
-					<span class="ml-auto text-xs text-muted-foreground">2 hours ago</span>
+					<span class="text-muted-foreground ml-auto text-xs">2 hours ago</span>
 				</Command.Item>
 				<Command.Item>
 					<FileIcon />
 					<span>package.json</span>
-					<span class="ml-auto text-xs text-muted-foreground">5 hours ago</span>
+					<span class="text-muted-foreground ml-auto text-xs">5 hours ago</span>
 				</Command.Item>
 				<Command.Item>
 					<FileIcon />
 					<span>index.ts</span>
-					<span class="ml-auto text-xs text-muted-foreground">1 day ago</span>
+					<span class="text-muted-foreground ml-auto text-xs">1 day ago</span>
 				</Command.Item>
 			</Command.Group>
 			<Command.Separator />

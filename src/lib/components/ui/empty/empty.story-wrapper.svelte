@@ -47,7 +47,7 @@
 		</Empty.Content>
 	</Empty.Root>
 {:else if variant === 'background'}
-	<Empty.Root class="h-full bg-gradient-to-b from-muted/50 from-30% to-background">
+	<Empty.Root class="from-muted/50 to-background h-full bg-gradient-to-b from-30%">
 		<Empty.Header>
 			<Empty.Media variant="icon">
 				<BellIcon />
@@ -86,7 +86,7 @@
 	<Empty.Root class="flex-none border">
 		<Empty.Header>
 			<Empty.Media>
-				<div class="flex -space-x-2 *:size-12 *:ring-2 *:ring-background *:grayscale">
+				<div class="*:ring-background flex -space-x-2 *:size-12 *:ring-2 *:grayscale">
 					<Avatar.Root>
 						<Avatar.Image src="https://github.com/shadcn.png" alt="@shadcn" />
 						<Avatar.Fallback>CN</Avatar.Fallback>

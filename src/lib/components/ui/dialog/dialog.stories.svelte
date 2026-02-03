@@ -51,7 +51,7 @@
 					This is a dialog description. It provides additional context.
 				</Dialog.Description>
 			</Dialog.Header>
-			<p class="text-sm text-muted-foreground">
+			<p class="text-muted-foreground text-sm">
 				Dialog content goes here. You can add any components you need.
 			</p>
 		</Dialog.Content>

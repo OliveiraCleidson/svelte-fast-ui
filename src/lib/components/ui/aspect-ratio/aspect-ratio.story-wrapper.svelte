@@ -9,7 +9,7 @@
 </script>
 
 <div class="w-full max-w-md">
-	<AspectRatio {ratio} class="rounded-lg bg-muted">
+	<AspectRatio {ratio} class="bg-muted rounded-lg">
 		<img
 			src="https://images.unsplash.com/photo-1588345921523-c2dcdb7f1dcd?w=800&dpr=2&q=80"
 			alt="Gray by Drew Beamer"

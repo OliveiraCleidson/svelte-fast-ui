@@ -91,7 +91,7 @@
 <Story name="FileExplorer">
 	<ContextMenu>
 		<ContextMenuTrigger
-			class="flex h-[150px] w-[300px] items-center justify-center rounded-md border bg-muted/50 text-sm"
+			class="bg-muted/50 flex h-[150px] w-[300px] items-center justify-center rounded-md border text-sm"
 		>
 			<div class="text-center">
 				<div class="mb-2 text-4xl">📁</div>
@@ -184,7 +184,7 @@
 
 <Story name="TableRow">
 	<div class="rounded-md border">
-		<div class="grid grid-cols-3 border-b bg-muted p-2 text-sm font-medium">
+		<div class="bg-muted grid grid-cols-3 border-b p-2 text-sm font-medium">
 			<span>Name</span>
 			<span>Status</span>
 			<span>Amount</span>
@@ -192,7 +192,7 @@
 		{#each ['John Doe', 'Jane Smith', 'Bob Wilson'] as name, i}
 			<ContextMenu>
 				<ContextMenuTrigger
-					class="grid grid-cols-3 border-b p-2 text-sm last:border-0 hover:bg-muted/50"
+					class="hover:bg-muted/50 grid grid-cols-3 border-b p-2 text-sm last:border-0"
 				>
 					<span>{name}</span>
 					<span class="text-green-600">Active</span>

@@ -52,7 +52,7 @@
 	<div class="flex flex-col gap-3">
 		<Label for="{id}-dropdown" class="px-1">Dropdown Layout</Label>
 		<Select.Root type="single" bind:value={dropdown}>
-			<Select.Trigger id="{id}-dropdown" size="sm" class="w-full bg-background">
+			<Select.Trigger id="{id}-dropdown" size="sm" class="bg-background w-full">
 				{selectedDropdown}
 			</Select.Trigger>
 			<Select.Content align="center">

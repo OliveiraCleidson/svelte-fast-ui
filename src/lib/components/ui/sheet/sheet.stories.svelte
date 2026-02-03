@@ -50,7 +50,7 @@
 				<Sheet.Description>This sheet opens from the right side.</Sheet.Description>
 			</Sheet.Header>
 			<div class="py-4">
-				<p class="text-sm text-muted-foreground">Sheet content goes here.</p>
+				<p class="text-muted-foreground text-sm">Sheet content goes here.</p>
 			</div>
 		</Sheet.Content>
 	</Sheet.Root>
@@ -144,10 +144,10 @@
 			<div class="space-y-4 py-4">
 				{#each [1, 2, 3] as item}
 					<div class="flex items-center gap-4 rounded border p-2">
-						<div class="size-16 rounded bg-muted"></div>
+						<div class="bg-muted size-16 rounded"></div>
 						<div class="flex-1">
 							<p class="font-medium">Product {item}</p>
-							<p class="text-sm text-muted-foreground">$29.99</p>
+							<p class="text-muted-foreground text-sm">$29.99</p>
 						</div>
 						<Button variant="ghost" size="sm">Remove</Button>
 					</div>

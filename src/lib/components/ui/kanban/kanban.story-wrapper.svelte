@@ -208,7 +208,7 @@
 </script>
 
 {#if variant === 'default'}
-	<div class="min-h-[500px] rounded-lg bg-muted/30">
+	<div class="bg-muted/30 min-h-[500px] rounded-lg">
 		<Kanban.Board
 			bind:columns={defaultColumns}
 			onCardMove={handleCardMove}
@@ -216,7 +216,7 @@
 		/>
 	</div>
 {:else if variant === 'custom-card'}
-	<div class="min-h-[500px] rounded-lg bg-muted/30">
+	<div class="bg-muted/30 min-h-[500px] rounded-lg">
 		<Kanban.Board bind:columns={customCardColumns} onCardMove={handleCardMove}>
 			{#snippet cardSnippet({ card })}
 				<Kanban.Card {card}>
@@ -233,16 +233,16 @@
 								{/if}
 							</div>
 							{#if c.description}
-								<p class="text-sm text-muted-foreground">{c.description}</p>
+								<p class="text-muted-foreground text-sm">{c.description}</p>
 							{/if}
 							{#if c.assignee}
 								<div class="flex items-center gap-2 pt-2">
 									<div
-										class="flex h-6 w-6 items-center justify-center rounded-full bg-primary text-xs text-primary-foreground"
+										class="bg-primary text-primary-foreground flex h-6 w-6 items-center justify-center rounded-full text-xs"
 									>
 										{(c.assignee as string).charAt(0)}
 									</div>
-									<span class="text-xs text-muted-foreground">{c.assignee}</span>
+									<span class="text-muted-foreground text-xs">{c.assignee}</span>
 								</div>
 							{/if}
 						</div>
@@ -252,11 +252,11 @@
 		</Kanban.Board>
 	</div>
 {:else if variant === 'empty'}
-	<div class="min-h-[500px] rounded-lg bg-muted/30">
+	<div class="bg-muted/30 min-h-[500px] rounded-lg">
 		<Kanban.Board bind:columns={emptyColumns} />
 	</div>
 {:else if variant === 'many-columns'}
-	<div class="min-h-[500px] overflow-x-auto rounded-lg bg-muted/30">
+	<div class="bg-muted/30 min-h-[500px] overflow-x-auto rounded-lg">
 		<Kanban.Board bind:columns={manyColumns} onColumnReorder={handleColumnReorder} />
 	</div>
 {/if}

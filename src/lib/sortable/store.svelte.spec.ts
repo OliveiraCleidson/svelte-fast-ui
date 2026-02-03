@@ -1,3 +1,4 @@
+// @vitest-environment jsdom
 import { describe, it, expect, beforeEach } from 'vitest';
 import { sortableStore, setDragging, clearDragging, getDraggingItem } from './store.svelte.js';
 import type { SortableItemProps } from './types.js';

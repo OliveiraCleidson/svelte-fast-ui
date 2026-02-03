@@ -31,7 +31,7 @@
 			<Avatar.Fallback>ER</Avatar.Fallback>
 		</Avatar.Root>
 		<div
-			class="flex -space-x-2 *:data-[slot=avatar]:ring-2 *:data-[slot=avatar]:ring-background *:data-[slot=avatar]:grayscale"
+			class="*:data-[slot=avatar]:ring-background flex -space-x-2 *:data-[slot=avatar]:ring-2 *:data-[slot=avatar]:grayscale"
 		>
 			<Avatar.Root>
 				<Avatar.Image src="https://github.com/shadcn.png" alt="@shadcn" />
@@ -140,7 +140,7 @@
 </Story>
 
 <Story name="AvatarGroup">
-	<div class="flex -space-x-3 *:data-[slot=avatar]:ring-2 *:data-[slot=avatar]:ring-background">
+	<div class="*:data-[slot=avatar]:ring-background flex -space-x-3 *:data-[slot=avatar]:ring-2">
 		<Avatar.Root>
 			<Avatar.Image src="https://github.com/shadcn.png" alt="User 1" />
 			<Avatar.Fallback>U1</Avatar.Fallback>
@@ -154,7 +154,7 @@
 			<Avatar.Fallback>U3</Avatar.Fallback>
 		</Avatar.Root>
 		<Avatar.Root>
-			<Avatar.Fallback class="bg-muted text-xs text-muted-foreground">+5</Avatar.Fallback>
+			<Avatar.Fallback class="bg-muted text-muted-foreground text-xs">+5</Avatar.Fallback>
 		</Avatar.Root>
 	</div>
 </Story>
@@ -167,7 +167,7 @@
 		</Avatar.Root>
 		<div class="min-w-0 flex-1">
 			<p class="truncate font-medium">shadcn</p>
-			<p class="truncate text-sm text-muted-foreground">shadcn@example.com</p>
+			<p class="text-muted-foreground truncate text-sm">shadcn@example.com</p>
 		</div>
 	</div>
 </Story>
@@ -182,7 +182,7 @@
 			<div class="flex-1 space-y-1">
 				<div class="flex items-center gap-2">
 					<span class="text-sm font-medium">shadcn</span>
-					<span class="text-xs text-muted-foreground">2 hours ago</span>
+					<span class="text-muted-foreground text-xs">2 hours ago</span>
 				</div>
 				<p class="text-sm">This is a great example of an avatar in a comment thread.</p>
 			</div>
@@ -194,7 +194,7 @@
 			<div class="flex-1 space-y-1">
 				<div class="flex items-center gap-2">
 					<span class="text-sm font-medium">John Doe</span>
-					<span class="text-xs text-muted-foreground">1 hour ago</span>
+					<span class="text-muted-foreground text-xs">1 hour ago</span>
 				</div>
 				<p class="text-sm">I agree! The fallback colors are really nice too.</p>
 			</div>

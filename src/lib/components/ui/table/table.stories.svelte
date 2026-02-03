@@ -224,7 +224,7 @@
 		</TableHeader>
 		<TableBody>
 			<TableRow>
-				<TableCell colspan={3} class="h-24 text-center text-muted-foreground">
+				<TableCell colspan={3} class="text-muted-foreground h-24 text-center">
 					No invoices found.
 				</TableCell>
 			</TableRow>

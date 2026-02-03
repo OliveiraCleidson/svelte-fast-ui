@@ -92,7 +92,7 @@
 					<Sidebar.MenuItem>
 						<Sidebar.MenuButton size="lg">
 							<div
-								class="flex aspect-square size-8 items-center justify-center rounded-lg bg-sidebar-primary text-sidebar-primary-foreground"
+								class="bg-sidebar-primary text-sidebar-primary-foreground flex aspect-square size-8 items-center justify-center rounded-lg"
 							>
 								<CommandIcon class="size-4" />
 							</div>
@@ -214,11 +214,11 @@
 			</header>
 			<div class="flex flex-1 flex-col gap-4 p-4">
 				<div class="grid auto-rows-min gap-4 md:grid-cols-3">
-					<div class="aspect-video rounded-xl bg-muted/50"></div>
-					<div class="aspect-video rounded-xl bg-muted/50"></div>
-					<div class="aspect-video rounded-xl bg-muted/50"></div>
+					<div class="bg-muted/50 aspect-video rounded-xl"></div>
+					<div class="bg-muted/50 aspect-video rounded-xl"></div>
+					<div class="bg-muted/50 aspect-video rounded-xl"></div>
 				</div>
-				<div class="min-h-[200px] flex-1 rounded-xl bg-muted/50"></div>
+				<div class="bg-muted/50 min-h-[200px] flex-1 rounded-xl"></div>
 			</div>
 		</Sidebar.Inset>
 	</Sidebar.Provider>

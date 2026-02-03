@@ -55,7 +55,7 @@
 		<Checkbox id="terms-desc" checked />
 		<div class="grid gap-2">
 			<Label for="terms-desc">Accept terms and conditions</Label>
-			<p class="text-sm text-muted-foreground">
+			<p class="text-muted-foreground text-sm">
 				By clicking this checkbox, you agree to the terms and conditions.
 			</p>
 		</div>
@@ -78,7 +78,7 @@
 
 <Story name="CardStyle">
 	<Label
-		class="flex items-start gap-3 rounded-lg border p-3 hover:bg-accent/50 has-[[data-state=checked]]:border-blue-600 has-[[data-state=checked]]:bg-blue-50 dark:has-[[data-state=checked]]:border-blue-900 dark:has-[[data-state=checked]]:bg-blue-950"
+		class="hover:bg-accent/50 flex items-start gap-3 rounded-lg border p-3 has-[[data-state=checked]]:border-blue-600 has-[[data-state=checked]]:bg-blue-50 dark:has-[[data-state=checked]]:border-blue-900 dark:has-[[data-state=checked]]:bg-blue-950"
 	>
 		<Checkbox
 			id="card-checkbox"
@@ -87,7 +87,7 @@
 		/>
 		<div class="grid gap-1.5 font-normal">
 			<p class="text-sm leading-none font-medium">Enable notifications</p>
-			<p class="text-sm text-muted-foreground">
+			<p class="text-muted-foreground text-sm">
 				You can enable or disable notifications at any time.
 			</p>
 		</div>

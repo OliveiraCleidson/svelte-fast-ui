@@ -34,7 +34,7 @@
 					<p class="text-sm">Cybernetically enhanced web apps.</p>
 					<div class="flex items-center pt-2">
 						<CalendarDaysIcon class="me-2 size-4 opacity-70" />
-						<span class="text-xs text-muted-foreground"> Joined September 2022 </span>
+						<span class="text-muted-foreground text-xs"> Joined September 2022 </span>
 					</div>
 				</div>
 			</div>
@@ -75,11 +75,11 @@
 				</Avatar.Root>
 				<div class="flex-1 space-y-1">
 					<h4 class="text-sm font-semibold">John Doe</h4>
-					<p class="text-sm text-muted-foreground">john@example.com</p>
+					<p class="text-muted-foreground text-sm">john@example.com</p>
 					<p class="text-sm">
 						Senior Developer at Acme Inc. Working on building great user experiences.
 					</p>
-					<div class="flex gap-4 pt-2 text-xs text-muted-foreground">
+					<div class="text-muted-foreground flex gap-4 pt-2 text-xs">
 						<span><strong class="text-foreground">234</strong> Following</span>
 						<span><strong class="text-foreground">1.2k</strong> Followers</span>
 					</div>
@@ -98,10 +98,10 @@
 		</HoverCard.Trigger>
 		<HoverCard.Content class="w-80">
 			<div class="space-y-3">
-				<div class="h-32 rounded-md bg-muted"></div>
+				<div class="bg-muted h-32 rounded-md"></div>
 				<div>
 					<h4 class="text-sm font-semibold">Premium Headphones</h4>
-					<p class="text-sm text-muted-foreground">
+					<p class="text-muted-foreground text-sm">
 						High-quality wireless headphones with noise cancellation.
 					</p>
 				</div>
@@ -129,11 +129,11 @@
 			<HoverCard.Content class="w-80">
 				<div class="space-y-2">
 					<h4 class="text-sm font-semibold">Svelte Documentation</h4>
-					<p class="text-sm text-muted-foreground">
+					<p class="text-muted-foreground text-sm">
 						The official Svelte documentation. Learn how to build cybernetically enhanced web
 						applications.
 					</p>
-					<p class="text-xs text-muted-foreground">svelte.dev</p>
+					<p class="text-muted-foreground text-xs">svelte.dev</p>
 				</div>
 			</HoverCard.Content>
 		</HoverCard.Root>
@@ -161,7 +161,7 @@
 						</Avatar.Root>
 						<div>
 							<h4 class="text-sm font-semibold">{member.name}</h4>
-							<p class="text-sm text-muted-foreground">{member.role}</p>
+							<p class="text-muted-foreground text-sm">{member.role}</p>
 						</div>
 					</div>
 				</HoverCard.Content>

@@ -49,7 +49,7 @@ In your main CSS file (e.g., `src/app.css` or `src/routes/layout.css`):
 @import 'svelte-fast-ui/tokens';
 
 /* Required: Scan the library for Tailwind classes */
-@source "../node_modules/svelte-fast-ui/dist/**/*.{svelte,js}";
+@source '../node_modules/svelte-fast-ui/dist/**/*.{svelte,js}';
 
 @custom-variant dark (&:is(.dark *));
 
@@ -206,7 +206,7 @@ const className = cn(
 | Category       | Components                                                                                          |
 | -------------- | --------------------------------------------------------------------------------------------------- |
 | **Buttons**    | Button, ButtonGroup, Toggle, ToggleGroup                                                            |
-| **Inputs**     | Input, InputGroup, InputOTP, Textarea, Checkbox, RadioGroup, Select, NativeSelect, Slider, Switch  |
+| **Inputs**     | Input, InputGroup, InputOTP, Textarea, Checkbox, RadioGroup, Select, NativeSelect, Slider, Switch   |
 | **Layout**     | Card, Separator, Tabs, Accordion, Collapsible, Resizable                                            |
 | **Navigation** | Breadcrumb, Pagination, NavigationMenu, Menubar, Sidebar                                            |
 | **Overlays**   | Dialog, AlertDialog, Drawer, Sheet, Popover, HoverCard, Tooltip, DropdownMenu, ContextMenu, Command |
@@ -319,16 +319,16 @@ npm run lint
 
 ## Dependencies
 
-| Library                         | Purpose              |
-| ------------------------------- | -------------------- |
-| bits-ui                         | Headless components  |
-| tailwind-variants               | Style variants       |
-| layerchart                      | Charts               |
-| @tanstack/table-core            | Data tables          |
-| formsnap + sveltekit-superforms | Form handling        |
-| svelte-sonner                   | Toast notifications  |
-| mode-watcher                    | Light/dark theme     |
-| sortablejs                      | Drag and drop        |
+| Library                         | Purpose             |
+| ------------------------------- | ------------------- |
+| bits-ui                         | Headless components |
+| tailwind-variants               | Style variants      |
+| layerchart                      | Charts              |
+| @tanstack/table-core            | Data tables         |
+| formsnap + sveltekit-superforms | Form handling       |
+| svelte-sonner                   | Toast notifications |
+| mode-watcher                    | Light/dark theme    |
+| sortablejs                      | Drag and drop       |
 
 ## License
 
