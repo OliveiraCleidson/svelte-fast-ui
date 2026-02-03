@@ -7,6 +7,12 @@ e este projeto adere ao [Versionamento Semântico](https://semver.org/lang/pt-BR
 
 ## [Unreleased]
 
+## [0.0.1-beta.4] - 2026-02-03
+
+### Corrigido
+
+- Workflow de release: adicionada etapa obrigatória de formatação (`npm run format`) antes do commit para garantir consistência.
+
 ## [0.0.1-beta.3] - 2026-02-03
 
 ### Alterado
@@ -17,14 +23,12 @@ e este projeto adere ao [Versionamento Semântico](https://semver.org/lang/pt-BR
 
 - Workflow de publicação: removido script `prepublishOnly` durante o deploy para evitar erro de dependências.
 
-
 ## [0.0.1-beta.2] - 2026-02-03
 
 ### Corrigido
 
 - Configuração do Vitest: migrado `defineConfig` para `vitest/config`, adicionado pacote `jsdom` e diretiva `@vitest-environment jsdom` nos testes.
 - Padronização de formatação e ordenação de classes Tailwind em todos os componentes (Prettier).
-
 
 ## [0.0.1-beta.1] - 2026-02-03
 
