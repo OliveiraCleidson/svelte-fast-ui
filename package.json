@@ -1,6 +1,6 @@
 {
-	"name": "svelte-fast-ui",
-	"version": "0.0.1-beta.2",
+	"name": "@olivdev/svelte-fast-ui",
+	"version": "0.0.1-beta.3",
 	"description": "A fast, modern UI component library for Svelte 5 and SvelteKit, built with Tailwind CSS v4",
 	"type": "module",
 	"license": "MIT",

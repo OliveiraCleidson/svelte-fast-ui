@@ -65,6 +65,8 @@ jobs:
           path: dist/
 
       - name: Publish to npm
-        run: npm publish --provenance --access public
+        run: |
+          npm pkg delete scripts.prepublishOnly
+          npm publish --provenance --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

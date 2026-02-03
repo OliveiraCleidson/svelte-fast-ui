@@ -7,6 +7,17 @@ e este projeto adere ao [Versionamento Semântico](https://semver.org/lang/pt-BR
 
 ## [Unreleased]
 
+## [0.0.1-beta.3] - 2026-02-03
+
+### Alterado
+
+- Renomeado pacote para `@olivdev/svelte-fast-ui` para publicação com escopo.
+
+### Corrigido
+
+- Workflow de publicação: removido script `prepublishOnly` durante o deploy para evitar erro de dependências.
+
+
 ## [0.0.1-beta.2] - 2026-02-03
 
 ### Corrigido
