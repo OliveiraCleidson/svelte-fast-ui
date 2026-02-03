@@ -1,0 +1,4 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import '@olivdev/svelte-fast-ui/tokens/theme';
+@source '../node_modules/@olivdev/svelte-fast-ui/dist';

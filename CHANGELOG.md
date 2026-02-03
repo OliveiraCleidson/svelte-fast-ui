@@ -7,6 +7,24 @@ e este projeto adere ao [Versionamento Semântico](https://semver.org/lang/pt-BR
 
 ## [Unreleased]
 
+## [0.0.1] - 2026-02-03
+
+### Adicionado
+
+- Arquivo `CLAUDE.md` com contexto do projeto para agentes de IA, incluído no artefato npm.
+- Aplicação de exemplo em `examples/sveltekit-app/` consumindo o pacote publicado no npm.
+- Arquivo `.npmignore` para excluir pastas internas (`.agent`, `.claude`, `.github`, `examples`, `src`) do artefato npm.
+
+### Alterado
+
+- Documentação (README): reescrito o guia de setup — agora basta importar `@olivdev/svelte-fast-ui/tokens/theme` e adicionar a diretiva `@source` do Tailwind v4, sem necessidade de copiar blocos `@theme inline` ou criar `src/lib/utils.ts` manualmente.
+- Documentação (README): adicionada explicação sobre a diretiva `@source` e por que ela é obrigatória para que os componentes renderizem com estilo.
+- Documentação (README): dependências opcionais agora listadas individualmente por funcionalidade (calendário, charts, forms, etc.).
+
+### Corrigido
+
+- Documentação (README): atualizados badges e instruções de instalação para usar o nome correto do pacote `@olivdev/svelte-fast-ui`.
+
 ## [0.0.1-beta.4] - 2026-02-03
 
 ### Corrigido

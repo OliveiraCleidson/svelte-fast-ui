@@ -2,119 +2,86 @@
 
 A fast, modern UI component library for **Svelte 5** and **SvelteKit**, built with **Tailwind CSS v4**.
 
-[![npm version](https://img.shields.io/npm/v/svelte-fast-ui.svg)](https://www.npmjs.com/package/svelte-fast-ui)
+[![npm version](https://img.shields.io/npm/v/@olivdev/svelte-fast-ui.svg)](https://www.npmjs.com/package/@olivdev/svelte-fast-ui)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Features
 
-- 🚀 **Svelte 5** - Built with the latest Svelte runes and features
-- 🎨 **Tailwind CSS v4** - Using the new CSS-first configuration
-- 📦 **58+ Components** - Comprehensive set of UI primitives and composites
-- 🎭 **Design Tokens** - Layered architecture for easy theming
-- ♿ **Accessible** - Built on top of bits-ui headless components
-- 📱 **Responsive** - Mobile-first design approach
-- 🌙 **Dark Mode** - Built-in dark mode support
-- 📚 **Storybook** - Interactive component documentation
+- **Svelte 5** - Built with runes and the latest Svelte features
+- **Tailwind CSS v4** - CSS-first configuration with design tokens
+- **58+ Components** - Comprehensive set of UI primitives and composites
+- **Design Tokens** - Layered architecture (primitives, semantic, components) for easy theming
+- **Accessible** - Built on top of bits-ui headless components
+- **Dark Mode** - Built-in light/dark mode support
+- **Storybook** - Interactive component documentation
 
 ## Installation
 
 ```bash
-# npm
-npm install svelte-fast-ui
-
-# pnpm
-pnpm add svelte-fast-ui
-
-# bun
-bun add svelte-fast-ui
+npm install @olivdev/svelte-fast-ui
 ```
 
 ### Peer Dependencies
 
-Make sure you have these installed in your project:
-
 ```bash
-npm install svelte@^5.0.0 tailwindcss@^4.0.0
+npm install svelte@^5.0.0 tailwindcss@^4.0.0 @lucide/svelte tw-animate-css
 ```
 
 ## Setup
 
-### 1. Configure Tailwind CSS
+### 1. Configure Vite
 
-In your main CSS file (e.g., `src/app.css` or `src/routes/layout.css`):
+Add the Tailwind CSS plugin to your `vite.config.ts`:
+
+```ts
+import { sveltekit } from '@sveltejs/kit/vite';
+import tailwindcss from '@tailwindcss/vite';
+import { defineConfig } from 'vite';
+
+export default defineConfig({
+	plugins: [tailwindcss(), sveltekit()]
+});
+```
+
+### 2. Configure CSS
+
+Create or update your main CSS file (e.g., `src/app.css`):
 
 ```css
 @import 'tailwindcss';
 @import 'tw-animate-css';
-@import 'svelte-fast-ui/tokens';
-
-/* Required: Scan the library for Tailwind classes */
-@source '../node_modules/svelte-fast-ui/dist/**/*.{svelte,js}';
-
-@custom-variant dark (&:is(.dark *));
-
-/* Configure Tailwind theme with design tokens */
-@theme inline {
-	--radius-sm: calc(var(--radius) - 4px);
-	--radius-md: calc(var(--radius) - 2px);
-	--radius-lg: var(--radius);
-	--radius-xl: calc(var(--radius) + 4px);
-	--color-background: var(--background);
-	--color-foreground: var(--foreground);
-	--color-card: var(--card);
-	--color-card-foreground: var(--card-foreground);
-	--color-popover: var(--popover);
-	--color-popover-foreground: var(--popover-foreground);
-	--color-primary: var(--primary);
-	--color-primary-foreground: var(--primary-foreground);
-	--color-secondary: var(--secondary);
-	--color-secondary-foreground: var(--secondary-foreground);
-	--color-muted: var(--muted);
-	--color-muted-foreground: var(--muted-foreground);
-	--color-accent: var(--accent);
-	--color-accent-foreground: var(--accent-foreground);
-	--color-destructive: var(--destructive);
-	--color-destructive-foreground: var(--destructive-foreground);
-	--color-success: var(--success);
-	--color-success-foreground: var(--success-foreground);
-	--color-warning: var(--warning);
-	--color-warning-foreground: var(--warning-foreground);
-	--color-border: var(--border);
-	--color-input: var(--input);
-	--color-ring: var(--ring);
-	--color-chart-1: var(--chart-1);
-	--color-chart-2: var(--chart-2);
-	--color-chart-3: var(--chart-3);
-	--color-chart-4: var(--chart-4);
-	--color-chart-5: var(--chart-5);
-	--color-sidebar: var(--sidebar);
-	--color-sidebar-foreground: var(--sidebar-foreground);
-	--color-sidebar-primary: var(--sidebar-primary);
-	--color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-	--color-sidebar-accent: var(--sidebar-accent);
-	--color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-	--color-sidebar-border: var(--sidebar-border);
-	--color-sidebar-ring: var(--sidebar-ring);
-}
-
-@layer base {
-	* {
-		@apply border-border;
-	}
-	body {
-		@apply bg-background text-foreground;
-	}
-}
+@import '@olivdev/svelte-fast-ui/tokens/theme';
+@source '../node_modules/@olivdev/svelte-fast-ui/dist';
 ```
 
-### 2. Create a utils file (Required)
+> **Why `@source`?** Tailwind CSS v4 only scans your local source files for class names by default. The `@source` directive tells Tailwind to also scan the library's component files, so it generates all the CSS utility classes the components use (like `bg-primary`, `rounded-md`, etc.). Without it, components render without styling.
 
-Create `src/lib/utils.ts` in your project:
+The `tokens/theme` import includes everything you need:
 
-```typescript
-// Re-export utils from svelte-fast-ui
-// Components reference $lib/utils internally
-export * from 'svelte-fast-ui/utils';
+- **Primitive tokens** - Raw color values, radius scale
+- **Semantic tokens** - Design decisions (`--primary`, `--background`, etc.)
+- **Component tokens** - Component-specific variables
+- **Tailwind theme bridge** - Maps CSS variables to Tailwind's `@theme` system
+- **Base styles** - Border color defaults and body background/foreground
+
+### 3. Import the CSS in your layout
+
+```svelte
+<!-- src/routes/+layout.svelte -->
+<script lang="ts">
+	import '../app.css';
+
+	let { children } = $props();
+</script>
+
+{@render children()}
+```
+
+Optionally, apply a built-in theme after the main import:
+
+```css
+@import '@olivdev/svelte-fast-ui/tokens/theme';
+@import '@olivdev/svelte-fast-ui/tokens/themes/indigo-enterprise';
 ```
 
 ## Usage
@@ -123,28 +90,33 @@ export * from 'svelte-fast-ui/utils';
 
 ```svelte
 <script lang="ts">
-	import { Button } from 'svelte-fast-ui/components/ui/button';
-	import { Card, CardContent, CardHeader, CardTitle } from 'svelte-fast-ui/components/ui/card';
-	import { Input } from 'svelte-fast-ui/components/ui/input';
+	import { Button } from '@olivdev/svelte-fast-ui/components/ui/button';
+	import * as Card from '@olivdev/svelte-fast-ui/components/ui/card';
+	import { Input } from '@olivdev/svelte-fast-ui/components/ui/input';
+	import { Badge } from '@olivdev/svelte-fast-ui/components/ui/badge';
 </script>
 
-<Card>
-	<CardHeader>
-		<CardTitle>Welcome</CardTitle>
-	</CardHeader>
-	<CardContent>
+<Card.Root>
+	<Card.Header>
+		<Card.Title>Welcome</Card.Title>
+		<Card.Description>Get started with svelte-fast-ui</Card.Description>
+	</Card.Header>
+	<Card.Content>
 		<Input placeholder="Enter your name" />
-		<Button variant="default">Submit</Button>
-	</CardContent>
-</Card>
+		<div class="mt-4 flex gap-2">
+			<Button>Submit</Button>
+			<Button variant="outline">Cancel</Button>
+			<Badge variant="secondary">New</Badge>
+		</div>
+	</Card.Content>
+</Card.Root>
 ```
 
 ### Using Utilities
 
 ```typescript
-import { cn } from 'svelte-fast-ui/utils';
+import { cn } from '@olivdev/svelte-fast-ui/utils';
 
-// Combine classes conditionally
 const className = cn(
 	'base-class',
 	isActive && 'active-class',
@@ -156,22 +128,18 @@ const className = cn(
 
 ```svelte
 <script lang="ts">
-	import { IsMobile } from 'svelte-fast-ui/hooks/is-mobile.svelte';
-	import { UseClipboard } from 'svelte-fast-ui/hooks/use-clipboard.svelte';
+	import { IsMobile } from '@olivdev/svelte-fast-ui/hooks/is-mobile.svelte';
+	import { UseClipboard } from '@olivdev/svelte-fast-ui/hooks/use-clipboard.svelte';
 
 	const isMobile = new IsMobile();
 	const clipboard = new UseClipboard();
-
-	async function copyText() {
-		await clipboard.copy('Text copied!');
-	}
 </script>
 
 {#if isMobile.current}
 	<p>You are on a mobile device</p>
 {/if}
 
-<button onclick={copyText}>
+<button onclick={() => clipboard.copy('Hello!')}>
 	{clipboard.copied ? 'Copied!' : 'Copy'}
 </button>
 ```
@@ -180,7 +148,7 @@ const className = cn(
 
 ```svelte
 <script lang="ts">
-	import { SortableList } from 'svelte-fast-ui/sortable';
+	import { SortableList } from '@olivdev/svelte-fast-ui/sortable';
 
 	let items = $state([
 		{ id: '1', name: 'Item 1' },
@@ -192,7 +160,7 @@ const className = cn(
 <SortableList
 	{items}
 	onMove={(info) => {
-		// Reorder items
+		/* Reorder items */
 	}}
 >
 	{#each items as item (item.id)}
@@ -214,68 +182,44 @@ const className = cn(
 | **Data**       | Table, DataTable, Calendar, RangeCalendar, Chart                                                    |
 | **Others**     | Avatar, AspectRatio, Carousel, Empty, Field, Form, Item, Kanban, Kbd, Label, ScrollArea, Typography |
 
-## Importing CSS Tokens
-
-Import all tokens:
-
-```css
-@import 'svelte-fast-ui/tokens';
-```
-
-Or import specific token files:
-
-```css
-@import 'svelte-fast-ui/tokens/primitives.css';
-@import 'svelte-fast-ui/tokens/semantic.css';
-@import 'svelte-fast-ui/tokens/components.css';
-```
-
 ## Theming
 
 The library uses a layered design token architecture:
 
-### 1. Primitives (`primitives.css`)
+### Token Layers
 
-Raw values without semantics. **Should not be overridden.**
+1. **Primitives** (`primitives.css`) - Raw values. Should not be overridden.
 
-```css
---primitive-neutral-950: oklch(0.145 0 0);
---primitive-red-500: oklch(0.577 0.245 27.325);
---primitive-radius-lg: 0.625rem;
-```
+   ```css
+   --primitive-neutral-950: oklch(0.145 0 0);
+   --primitive-red-500: oklch(0.577 0.245 27.325);
+   ```
 
-### 2. Semantic (`semantic.css`)
+2. **Semantic** (`semantic.css`) - Design decisions. Can be overridden by themes.
 
-Design decisions. **Can be overridden by themes.**
+   ```css
+   --primary: var(--primitive-neutral-900);
+   --destructive: var(--primitive-red-500);
+   ```
 
-```css
---background: var(--primitive-neutral-0);
---foreground: var(--primitive-neutral-950);
---primary: var(--primitive-neutral-900);
---destructive: var(--primitive-red-500);
-```
+3. **Components** (`components.css`) - Component-specific tokens. Reference semantic tokens.
 
-### 3. Components (`components.css`)
+   ```css
+   --button-default-bg: var(--primary);
+   --badge-destructive-bg: var(--destructive);
+   ```
 
-Component-specific tokens. Reference only semantic tokens.
+### Custom Theme
 
-```css
---button-default-bg: var(--primary);
---button-destructive-bg: var(--destructive);
-```
-
-### Customizing the Theme
-
-Override semantic tokens in your app:
+Override semantic tokens in your app CSS after the library import:
 
 ```css
-/* src/app.css */
 @import 'tailwindcss';
-@import 'svelte-fast-ui/tokens';
+@import '@olivdev/svelte-fast-ui/tokens/theme';
+@source '../node_modules/@olivdev/svelte-fast-ui/dist';
 
-/* Custom theme */
 :root {
-	--primary: oklch(0.5 0.2 260); /* Blue */
+	--primary: oklch(0.5 0.2 260);
 	--primary-foreground: oklch(1 0 0);
 }
 
@@ -284,13 +228,55 @@ Override semantic tokens in your app:
 }
 ```
 
-## Optional Dependencies
+### Importing Token Layers Individually
 
-For form handling with validation, install these optional dependencies:
+```css
+@import '@olivdev/svelte-fast-ui/tokens/primitives.css';
+@import '@olivdev/svelte-fast-ui/tokens/semantic.css';
+@import '@olivdev/svelte-fast-ui/tokens/components.css';
+```
+
+## Optional Peer Dependencies
+
+Most peer dependencies are optional and only needed if you use specific components:
 
 ```bash
+# Form handling
 npm install formsnap sveltekit-superforms zod
+
+# Calendar
+npm install @internationalized/date
+
+# Data tables
+npm install @tanstack/table-core
+
+# Charts
+npm install layerchart
+
+# Carousel
+npm install embla-carousel-svelte
+
+# Drag and drop
+npm install sortablejs @types/sortablejs
+
+# Dark mode
+npm install mode-watcher
+
+# Resizable panels
+npm install paneforge
+
+# Drawer
+npm install vaul-svelte
+
+# Toasts
+npm install svelte-sonner
 ```
+
+## Examples
+
+See the [`examples/`](./examples/) directory for working example applications:
+
+- **[sveltekit-app](./examples/sveltekit-app/)** - Basic SvelteKit app consuming the package from npm
 
 ## Development
 
