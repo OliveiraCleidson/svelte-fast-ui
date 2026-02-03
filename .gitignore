@@ -1,0 +1,41 @@
+# Dependencies
+node_modules
+
+# Build outputs
+dist
+.svelte-kit
+storybook-static
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Env files
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Testing
+coverage
+
+# Package manager locks (choose one and remove others if preferred)
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
+# bun.lockb
+
+# Turbo (from monorepo - not needed here)
+.turbo

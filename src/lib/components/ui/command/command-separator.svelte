@@ -1,0 +1,12 @@
+<script lang="ts">
+	import { Command as CommandPrimitive } from 'bits-ui';
+	import { cn } from '../../../utils.js';
+
+	let { class: className, ...restProps }: CommandPrimitive.SeparatorProps = $props();
+</script>
+
+<CommandPrimitive.Separator
+	data-slot="command-separator"
+	class={cn('-mx-1 h-px bg-border', className)}
+	{...restProps}
+/>

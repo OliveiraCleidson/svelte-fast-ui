@@ -1,0 +1,92 @@
+/*
+ * COMPONENT TOKENS
+ * Decisoes especificas de componentes.
+ * Referenciam tokens semanticos.
+ *
+ * Regras:
+ * - Prefixo do componente (button-*, toggle-*)
+ * - Nome funcional, nao visual
+ * - Tokens descrevem resultado visual, nao mecanismo
+ * - NUNCA usar .dark aqui (semantic resolve)
+ * - Expandir por necessidade, nao por antecipacao
+ */
+
+:root {
+	/* ========================================
+	 * BUTTON
+	 * Variantes: default, destructive, outline, secondary, ghost, link
+	 * ======================================== */
+
+	/* Default */
+	--button-default-bg: var(--primary);
+	--button-default-text: var(--primary-foreground);
+
+	/* Destructive */
+	--button-destructive-bg: var(--destructive);
+	--button-destructive-text: var(--destructive-foreground);
+
+	/* Outline */
+	--button-outline-bg: var(--background);
+	--button-outline-text: var(--foreground);
+	--button-outline-border: var(--border);
+
+	/* Secondary */
+	--button-secondary-bg: var(--secondary);
+	--button-secondary-text: var(--secondary-foreground);
+
+	/* Ghost */
+	--button-ghost-bg: transparent;
+	--button-ghost-text: var(--foreground);
+
+	/* Link */
+	--button-link-text: var(--primary);
+
+	/* ========================================
+	 * TOGGLE
+	 * Estados: off, on
+	 * Variantes: default, outline
+	 * ======================================== */
+
+	--toggle-bg: transparent;
+	--toggle-text: var(--foreground);
+	--toggle-on-bg: var(--accent);
+	--toggle-on-text: var(--accent-foreground);
+	--toggle-outline-border: var(--input);
+
+	/* ========================================
+	 * BADGE
+	 * Variantes: default, secondary, destructive, outline
+	 * ======================================== */
+
+	--badge-default-bg: var(--primary);
+	--badge-default-text: var(--primary-foreground);
+
+	--badge-secondary-bg: var(--secondary);
+	--badge-secondary-text: var(--secondary-foreground);
+
+	--badge-destructive-bg: var(--destructive);
+	--badge-destructive-text: var(--destructive-foreground);
+
+	--badge-outline-bg: transparent;
+	--badge-outline-text: var(--foreground);
+
+	/* ========================================
+	 * ALERT
+	 * Variantes: default, destructive
+	 * ======================================== */
+
+	--alert-default-bg: var(--card);
+	--alert-default-text: var(--card-foreground);
+
+	--alert-destructive-bg: var(--card);
+	--alert-destructive-text: var(--destructive);
+
+	/* ========================================
+	 * SWITCH
+	 * Estados: unchecked, checked
+	 * ======================================== */
+
+	--switch-unchecked-bg: var(--input);
+	--switch-checked-bg: var(--primary);
+	--switch-thumb-bg: var(--background);
+}

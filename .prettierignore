@@ -1,0 +1,5 @@
+# Ignore artifacts
+dist
+.svelte-kit
+node_modules
+storybook-static

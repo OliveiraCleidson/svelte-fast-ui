@@ -1,0 +1,12 @@
+/*
+ * DESIGN TOKENS - Layered Architecture
+ *
+ * Layer order (specificity):
+ * 1. primitives - Base values (should not be overridden)
+ * 2. semantic   - Design decisions (can be overridden by themes)
+ * 3. components - Component-specific decisions (reference semantic)
+ */
+
+@import './primitives.css';
+@import './semantic.css';
+@import './components.css';

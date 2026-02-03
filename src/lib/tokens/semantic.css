@@ -1,0 +1,154 @@
+/*
+ * SEMANTIC TOKENS
+ * Decisoes de design que referenciam primitivos.
+ * Esta camada PODE ser sobrescrita por temas de aplicacao.
+ *
+ * Este e o tema padrao neutro da biblioteca.
+ * Aplicacoes podem sobrescrever importando um tema apos este arquivo.
+ */
+
+:root {
+	/* ========================================
+	 * CORE
+	 * ======================================== */
+	--background: var(--primitive-neutral-0);
+	--foreground: var(--primitive-neutral-950);
+
+	/* ========================================
+	 * SURFACES
+	 * ======================================== */
+	--card: var(--primitive-neutral-0);
+	--card-foreground: var(--primitive-neutral-950);
+	--popover: var(--primitive-neutral-0);
+	--popover-foreground: var(--primitive-neutral-950);
+
+	/* ========================================
+	 * INTERACTIVE
+	 * ======================================== */
+	--primary: var(--primitive-neutral-900);
+	--primary-foreground: var(--primitive-neutral-50);
+	--secondary: var(--primitive-neutral-100);
+	--secondary-foreground: var(--primitive-neutral-900);
+
+	/* ========================================
+	 * MUTED / ACCENT
+	 * ======================================== */
+	--muted: var(--primitive-neutral-100);
+	--muted-foreground: var(--primitive-neutral-500);
+	--accent: var(--primitive-neutral-100);
+	--accent-foreground: var(--primitive-neutral-900);
+
+	/* ========================================
+	 * FEEDBACK
+	 * ======================================== */
+	--destructive: var(--primitive-red-500);
+	--destructive-foreground: var(--primitive-neutral-0);
+	--success: var(--primitive-green-500);
+	--success-foreground: var(--primitive-neutral-0);
+	--warning: var(--primitive-amber-500);
+	--warning-foreground: var(--primitive-neutral-900);
+
+	/* ========================================
+	 * STRUCTURAL
+	 * ======================================== */
+	--border: var(--primitive-neutral-200);
+	--input: var(--primitive-neutral-200);
+	--ring: var(--primitive-neutral-400);
+
+	/* ========================================
+	 * DESIGN DECISIONS
+	 * ======================================== */
+	--radius: var(--primitive-radius-lg);
+
+	/* ========================================
+	 * CHART - Categorical (distinct data series)
+	 * ======================================== */
+	--chart-categorical-1: oklch(0.646 0.222 41.116);
+	--chart-categorical-2: oklch(0.6 0.118 184.704);
+	--chart-categorical-3: oklch(0.398 0.07 227.392);
+	--chart-categorical-4: oklch(0.828 0.189 84.429);
+	--chart-categorical-5: oklch(0.769 0.188 70.08);
+
+	/* Aliases for backward compatibility */
+	--chart-1: var(--chart-categorical-1);
+	--chart-2: var(--chart-categorical-2);
+	--chart-3: var(--chart-categorical-3);
+	--chart-4: var(--chart-categorical-4);
+	--chart-5: var(--chart-categorical-5);
+
+	/* ========================================
+	 * SIDEBAR
+	 * ======================================== */
+	--sidebar: var(--primitive-neutral-50);
+	--sidebar-foreground: var(--primitive-neutral-950);
+	--sidebar-primary: var(--primitive-neutral-900);
+	--sidebar-primary-foreground: var(--primitive-neutral-50);
+	--sidebar-accent: var(--primitive-neutral-100);
+	--sidebar-accent-foreground: var(--primitive-neutral-900);
+	--sidebar-border: var(--primitive-neutral-200);
+	--sidebar-ring: var(--primitive-neutral-400);
+}
+
+/* ==========================================
+ * DARK MODE
+ * ========================================== */
+.dark {
+	/* Core */
+	--background: var(--primitive-neutral-950);
+	--foreground: var(--primitive-neutral-50);
+
+	/* Surfaces */
+	--card: var(--primitive-neutral-900);
+	--card-foreground: var(--primitive-neutral-50);
+	--popover: var(--primitive-neutral-900);
+	--popover-foreground: var(--primitive-neutral-50);
+
+	/* Interactive */
+	--primary: var(--primitive-neutral-200);
+	--primary-foreground: var(--primitive-neutral-900);
+	--secondary: var(--primitive-neutral-800);
+	--secondary-foreground: var(--primitive-neutral-50);
+
+	/* Muted / Accent */
+	--muted: var(--primitive-neutral-800);
+	--muted-foreground: var(--primitive-neutral-400);
+	--accent: var(--primitive-neutral-800);
+	--accent-foreground: var(--primitive-neutral-50);
+
+	/* Feedback */
+	--destructive: var(--primitive-red-400);
+	--destructive-foreground: var(--primitive-neutral-0);
+	--success: var(--primitive-green-400);
+	--success-foreground: var(--primitive-neutral-950);
+	--warning: var(--primitive-amber-400);
+	--warning-foreground: var(--primitive-neutral-950);
+
+	/* Structural */
+	--border: oklch(1 0 0 / 10%);
+	--input: oklch(1 0 0 / 15%);
+	--ring: var(--primitive-neutral-500);
+
+	/* Chart - Categorical (dark mode) */
+	--chart-categorical-1: oklch(0.488 0.243 264.376);
+	--chart-categorical-2: oklch(0.696 0.17 162.48);
+	--chart-categorical-3: oklch(0.769 0.188 70.08);
+	--chart-categorical-4: oklch(0.627 0.265 303.9);
+	--chart-categorical-5: oklch(0.645 0.246 16.439);
+
+	/* Aliases maintained */
+	--chart-1: var(--chart-categorical-1);
+	--chart-2: var(--chart-categorical-2);
+	--chart-3: var(--chart-categorical-3);
+	--chart-4: var(--chart-categorical-4);
+	--chart-5: var(--chart-categorical-5);
+
+	/* Sidebar */
+	--sidebar: var(--primitive-neutral-900);
+	--sidebar-foreground: var(--primitive-neutral-50);
+	--sidebar-primary: oklch(0.488 0.243 264.376);
+	--sidebar-primary-foreground: var(--primitive-neutral-50);
+	--sidebar-accent: var(--primitive-neutral-800);
+	--sidebar-accent-foreground: var(--primitive-neutral-50);
+	--sidebar-border: oklch(1 0 0 / 10%);
+	--sidebar-ring: var(--primitive-neutral-500);
+}

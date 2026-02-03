@@ -1,0 +1,152 @@
+/*
+ * THEME: Indigo Enterprise
+ *
+ * Tema para aplicacoes enterprise modernas.
+ * Baseado em tendencias 2025 de design para SaaS/AI.
+ *
+ * Caracteristicas:
+ * - Indigo como cor primaria (inovacao, AI, futuro)
+ * - Slate como base (tom azulado tech)
+ * - Dark mode confortavel (sem preto puro)
+ * - Contraste suave para reducao de cansaco visual
+ *
+ * Uso:
+ * @import '$lib/tokens/themes/indigo-enterprise.css';
+ */
+
+:root {
+	/* ========================================
+	 * THEME SCALES
+	 * Cores locais do tema (nao primitivos)
+	 * ======================================== */
+
+	/* Indigo Scale - Innovation/Tech */
+	--theme-indigo-50: oklch(0.962 0.018 272.314);
+	--theme-indigo-100: oklch(0.93 0.034 272.788);
+	--theme-indigo-200: oklch(0.87 0.065 274.039);
+	--theme-indigo-400: oklch(0.673 0.182 276.935);
+	--theme-indigo-500: oklch(0.585 0.233 277.117);
+	--theme-indigo-600: oklch(0.541 0.217 264.052);
+	--theme-indigo-900: oklch(0.359 0.144 278.697);
+	--theme-indigo-950: oklch(0.257 0.09 281.288);
+
+	/* Slate Scale - Enterprise base with blue undertone */
+	--theme-slate-50: oklch(0.984 0.003 247.858);
+	--theme-slate-100: oklch(0.968 0.003 247.858);
+	--theme-slate-200: oklch(0.929 0.006 264.531);
+	--theme-slate-400: oklch(0.704 0.022 261.325);
+	--theme-slate-500: oklch(0.554 0.022 257.417);
+	--theme-slate-800: oklch(0.279 0.041 260.031);
+	--theme-slate-900: oklch(0.208 0.042 265.755);
+	--theme-slate-950: oklch(0.129 0.042 264.695);
+
+	/* ========================================
+	 * SEMANTIC OVERRIDES - Light Mode
+	 * ======================================== */
+
+	/* Core - soft off-white background */
+	--background: var(--theme-slate-50);
+	--foreground: var(--theme-slate-900);
+
+	/* Surfaces */
+	--card: var(--primitive-neutral-0);
+	--card-foreground: var(--theme-slate-900);
+	--popover: var(--primitive-neutral-0);
+	--popover-foreground: var(--theme-slate-900);
+
+	/* Interactive - Indigo as primary */
+	--primary: var(--theme-indigo-600);
+	--primary-foreground: var(--primitive-neutral-0);
+	--secondary: var(--theme-slate-100);
+	--secondary-foreground: var(--theme-slate-900);
+
+	/* Muted / Accent */
+	--muted: var(--theme-slate-100);
+	--muted-foreground: var(--theme-slate-500);
+	--accent: var(--theme-indigo-50);
+	--accent-foreground: var(--theme-indigo-900);
+
+	/* Structural */
+	--border: var(--theme-slate-200);
+	--input: var(--theme-slate-200);
+	--ring: var(--theme-indigo-400);
+
+	/* Chart - Indigo-based palette */
+	--chart-categorical-1: var(--theme-indigo-500);
+	--chart-categorical-2: oklch(0.6 0.118 184.704);
+	--chart-categorical-3: var(--primitive-amber-500);
+	--chart-categorical-4: var(--primitive-green-500);
+	--chart-categorical-5: var(--primitive-red-400);
+
+	--chart-1: var(--chart-categorical-1);
+	--chart-2: var(--chart-categorical-2);
+	--chart-3: var(--chart-categorical-3);
+	--chart-4: var(--chart-categorical-4);
+	--chart-5: var(--chart-categorical-5);
+
+	/* Sidebar */
+	--sidebar: var(--theme-slate-50);
+	--sidebar-foreground: var(--theme-slate-900);
+	--sidebar-primary: var(--theme-indigo-600);
+	--sidebar-primary-foreground: var(--primitive-neutral-0);
+	--sidebar-accent: var(--theme-indigo-50);
+	--sidebar-accent-foreground: var(--theme-indigo-900);
+	--sidebar-border: var(--theme-slate-200);
+	--sidebar-ring: var(--theme-indigo-400);
+}
+
+/* ==========================================
+ * DARK MODE
+ * Comfortable dark - not pure black
+ * ========================================== */
+.dark {
+	/* Core - soft black */
+	--background: var(--theme-slate-950);
+	--foreground: var(--theme-slate-100);
+
+	/* Surfaces */
+	--card: var(--theme-slate-900);
+	--card-foreground: var(--theme-slate-100);
+	--popover: var(--theme-slate-900);
+	--popover-foreground: var(--theme-slate-100);
+
+	/* Interactive - lighter indigo for contrast */
+	--primary: var(--theme-indigo-400);
+	--primary-foreground: var(--theme-slate-950);
+	--secondary: var(--theme-slate-800);
+	--secondary-foreground: var(--theme-slate-100);
+
+	/* Muted / Accent */
+	--muted: var(--theme-slate-800);
+	--muted-foreground: var(--theme-slate-400);
+	--accent: var(--theme-indigo-950);
+	--accent-foreground: var(--theme-indigo-200);
+
+	/* Structural - subtle alpha borders */
+	--border: oklch(1 0 0 / 10%);
+	--input: oklch(1 0 0 / 12%);
+	--ring: var(--theme-indigo-500);
+
+	/* Chart - vibrant for dark backgrounds */
+	--chart-categorical-1: var(--theme-indigo-400);
+	--chart-categorical-2: oklch(0.696 0.17 162.48);
+	--chart-categorical-3: var(--primitive-amber-400);
+	--chart-categorical-4: var(--primitive-green-400);
+	--chart-categorical-5: var(--primitive-red-400);
+
+	--chart-1: var(--chart-categorical-1);
+	--chart-2: var(--chart-categorical-2);
+	--chart-3: var(--chart-categorical-3);
+	--chart-4: var(--chart-categorical-4);
+	--chart-5: var(--chart-categorical-5);
+
+	/* Sidebar */
+	--sidebar: var(--theme-slate-900);
+	--sidebar-foreground: var(--theme-slate-100);
+	--sidebar-primary: var(--theme-indigo-400);
+	--sidebar-primary-foreground: var(--theme-slate-950);
+	--sidebar-accent: var(--theme-indigo-950);
+	--sidebar-accent-foreground: var(--theme-indigo-200);
+	--sidebar-border: oklch(1 0 0 / 10%);
+	--sidebar-ring: var(--theme-indigo-500);
+}
